@@ -290,3 +290,7 @@
 2020-02-06 08:20:50,939 INFO r.d.a.r.App [main] hsgkjbskj
 2020-02-06 08:21:20,885 WARN r.d.a.r.App [main] test2
 2020-02-06 08:23:05,359 WARN r.d.a.r.App [main] test2
+2020-02-06 12:03:59,527 WARN r.d.a.r.App [main] Env.Temp: 4 °C Errors: [3]
+2020-02-06 12:29:02,613 WARN r.d.a.r.App [main] Env.Temp: 6 °C Errors: [2]
+2020-02-06 12:34:03,052 WARN r.d.a.r.App [main] Env.Temp: 7 °C Errors: [3]
+2020-02-06 13:04:06,461 WARN r.d.a.r.App [main] Env.Temp: 9 °C Issues: HM rpm issue LEFT: 3512 HM rpm issue RIGHT: 3746 

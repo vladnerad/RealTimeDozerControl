@@ -14,7 +14,7 @@ public class App {
 //    private static final Logger LOG = LogManager.getRootLogger();
 
     public static final int PUMP_PRESS_BORDER = 450;
-    public static final int ENV_TEMP_BORDER = -20;
+//    public static final int ENV_TEMP_BORDER = -20;
     public static final int HYD_OIL_TEMP_BORDER = 75;
     public static final int MOTOR_SPEED_BORDER = 3500;
     public static final int COOLANT_TEMP_BORDER = 90;
@@ -43,7 +43,7 @@ public class App {
 //        StringBuilder issuesMessage = new StringBuilder();
 //        logger.info("hsgkjbskj");
 //        logger.warn("test2");
-//        System.out.println("1");
+//        System.out.println(new StringBuilder().toString() == null);
 
 //        LocalDateTime now = LocalDateTime.now();
 //        LocalDateTime from = now.minusDays(2);
@@ -62,21 +62,31 @@ public class App {
             while (true) {
                 if (LocalDateTime.now().equals(then.plusMinutes(TIME_GAP_MINUTES))) {
 //                    System.out.print(dtf.format(then) + " ");
-                    issues5minGap(then);
+                    issuesAndErrorsFromGap(then);
                     break;
                 }
             }
         }
     }
 
-    public static void issues5minGap(LocalDateTime from) {
+    public static void issuesAndErrorsFromGap(LocalDateTime from) {
         LocalDateTime to = from.plusMinutes(TIME_GAP_MINUTES);
         Message message = getMessage(from, to);
         getIssues(message);
     }
 
+    public static Message getMessage(LocalDateTime from, LocalDateTime to) {
+        Message message = new JsonHelper("4NE023815", getLocarusDateTimeFormat(from.minusHours(5)), getLocarusDateTimeFormat(to.minusHours(5))).getMessage();
+        if (message != null) {
+            if (message.getDescription() == null) {
+                return message;
+            } else System.out.println(message.getDescription());
+        } else System.out.println("Message is null");
+        return null;
+    }
+
     public static void getIssues(Message message) {
-        Set<String> issues;
+//        Set<String> issues;
         Set<Integer> errors;
         if (message != null) {
 //            String[] time = DataParser.getTimeArr(message);
@@ -86,80 +96,59 @@ public class App {
 //            boolean[][] digInData = DataParser.getDigitalInData(message);
 
             if (data != null) {
-                issues = new HashSet<>();
+//                issues = new HashSet<>();
                 int[][] clearData = Arrays.stream(data).map(DataHandler::convertData).toArray(int[][]::new);
-                for (int[] rec : clearData) {
-                    issues.addAll(getIssuesFromRow(rec));
-                }
-                String mes = getIssuesMessage(fillMap(clearData));
-                System.out.println(mes);
+//                for (int[] rec : clearData) {
+//                    issues.addAll(getIssuesFromRow(rec));
+//                }
+                Map<String, Integer> issuesMap = fillMap(clearData);
+                String issuesMessage = getIssuesMessage(issuesMap);
+//                System.out.println(mes);
                 errors = new HashSet<>();
                 for (int[] rec : data) {
                     errors.addAll(DataParser.getErrorsFromRow(rec));
                 }
 
                 String logMess = "";
-                if (issues.isEmpty() && errors.isEmpty()) {
-                    logMess = logMess.concat("Dozer works fine");
+                String degC = "°C ";
+                if (issuesMessage.equals("") && errors.isEmpty()) {
+                    logMess = logMess.concat(envirTemp)
+                            .concat(String.valueOf(issuesMap.get(envirTemp)))
+                            .concat(degC)
+                            .concat("Dozer works fine");
                     logger.info(logMess);
-                } else if (!issues.isEmpty() && !errors.isEmpty()) {
-                    logMess = logMess.concat(" Issues: ").concat(issues.toString()).concat(" Errors: ").concat(errors.toString());
+                } else if (/*!issues.isEmpty()*/!issuesMessage.equals("") && !errors.isEmpty()) {
+                    logMess = logMess.concat(envirTemp)
+                            .concat(String.valueOf(issuesMap.get(envirTemp)))
+                            .concat(degC)
+                            .concat(" Issues: ")
+                            .concat(issuesMessage/*issues.toString()*/)
+                            .concat(" Errors: ")
+                            .concat(errors.toString());
                     logger.warn(logMess);
-                } else if (!issues.isEmpty()) {
-                    logMess = logMess.concat("Issues: ").concat(issues.toString());
+                } else if (/*!issues.isEmpty()*/!issuesMessage.equals("")) {
+                    logMess = logMess.concat(envirTemp)
+                            .concat(String.valueOf(issuesMap.get(envirTemp)))
+                            .concat(degC)
+                            .concat("Issues: ")
+                            .concat(issuesMessage/*issues.toString()*/);
                     logger.warn(logMess);
                 } else {
-                    logMess = logMess.concat("Errors: ").concat(errors.toString());
+                    logMess = logMess.concat(envirTemp)
+                            .concat(String.valueOf(issuesMap.get(envirTemp)))
+                            .concat(degC)
+                            .concat("Errors: ")
+                            .concat(errors.toString());
                     logger.warn(logMess);
                 }
             } else logger.info("Standstill");
         }
     }
 
-    public static Message getMessage(LocalDateTime from, LocalDateTime to) {
-        Message message = new JsonHelper("4NE023815", getLocarusDateTimeFormat(from.minusHours(5)), getLocarusDateTimeFormat(to.minusHours(5))).getMessage();
-
-        if (message != null) {
-            if (message.getDescription() == null) {
-                return message;
-            } else System.out.println(message.getDescription());
-        } else System.out.println("Message is null");
-        return null;
-    }
-
     public static String getLocarusDateTimeFormat(LocalDateTime date) {
         DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("HH:mm:ss");
         return dtf1.format(date) + "T" + dtf2.format(date) + "Z";
-    }
-
-    public static Set<String> getIssuesFromRow(int[] row) {
-        if (row != null) {
-            Set<String> result = new HashSet<>();
-            if (row[AnalogInParams.PRESS_PUMP_LEFT.ordinal()] > PUMP_PRESS_BORDER) {
-                result.add(pressL);
-            }
-            if (row[AnalogInParams.PRESS_PUMP_RIGHT.ordinal()] > PUMP_PRESS_BORDER) {
-                result.add(pressR);
-            }
-            if (row[AnalogInParams.TEMP_ENVIR.ordinal()] < ENV_TEMP_BORDER) {
-                result.add(envirTemp);
-            }
-            if (row[AnalogInParams.TEMP_HYD_OIL.ordinal()] > HYD_OIL_TEMP_BORDER) {
-                result.add(tempHydOil);
-            }
-            if (row[AnalogInParams.SPEED_HM_LEFT.ordinal()] > MOTOR_SPEED_BORDER) {
-                result.add(hMSpeedL);
-            }
-            if (row[AnalogInParams.SPEED_HM_RIGHT.ordinal()] > MOTOR_SPEED_BORDER) {
-                result.add(hMSpeedR);
-            }
-            if (row[AnalogInParams.TEMP_COOLANT.ordinal()] > COOLANT_TEMP_BORDER) {
-                result.add(tempCoolant);
-            }
-            return result;
-        }
-        return null;
     }
 
     public static Map<String, Integer> fillMap(int[][] data) {
@@ -203,25 +192,55 @@ public class App {
     }
 
     public static String getIssuesMessage(Map<String, Integer> map) {
+        String spliter = "; ";
         StringBuilder sb = new StringBuilder();
         if (map.get(pressL) > PUMP_PRESS_BORDER) {
-            sb.append(pressL).append(map.get(pressL)).append(" ");
+            sb.append(pressL).append(map.get(pressL)).append(spliter);
         }
         if (map.get(pressR) > PUMP_PRESS_BORDER) {
-            sb.append(pressR).append(map.get(pressR)).append(" ");
+            sb.append(pressR).append(map.get(pressR)).append(spliter);
         }
         if (map.get(tempHydOil) > HYD_OIL_TEMP_BORDER) {
-            sb.append(tempHydOil).append(map.get(tempHydOil)).append(" ");
+            sb.append(tempHydOil).append(map.get(tempHydOil)).append(spliter);
         }
         if (map.get(hMSpeedL) > MOTOR_SPEED_BORDER) {
-            sb.append(hMSpeedL).append(map.get(hMSpeedL)).append(" ");
+            sb.append(hMSpeedL).append(map.get(hMSpeedL)).append(spliter);
         }
         if (map.get(hMSpeedR) > MOTOR_SPEED_BORDER) {
-            sb.append(hMSpeedR).append(map.get(hMSpeedR)).append(" ");
+            sb.append(hMSpeedR).append(map.get(hMSpeedR)).append(spliter);
         }
         if (map.get(tempCoolant) > COOLANT_TEMP_BORDER) {
-            sb.append(tempCoolant).append(map.get(tempCoolant)).append(" ");
+            sb.append(tempCoolant).append(map.get(tempCoolant)).append(spliter);
         }
         return sb.toString();
     }
+
+//    public static Set<String> getIssuesFromRow(int[] row) {
+//        if (row != null) {
+//            Set<String> result = new HashSet<>();
+//            if (row[AnalogInParams.PRESS_PUMP_LEFT.ordinal()] > PUMP_PRESS_BORDER) {
+//                result.add(pressL);
+//            }
+//            if (row[AnalogInParams.PRESS_PUMP_RIGHT.ordinal()] > PUMP_PRESS_BORDER) {
+//                result.add(pressR);
+//            }
+//            if (row[AnalogInParams.TEMP_ENVIR.ordinal()] < ENV_TEMP_BORDER) {
+//                result.add(envirTemp);
+//            }
+//            if (row[AnalogInParams.TEMP_HYD_OIL.ordinal()] > HYD_OIL_TEMP_BORDER) {
+//                result.add(tempHydOil);
+//            }
+//            if (row[AnalogInParams.SPEED_HM_LEFT.ordinal()] > MOTOR_SPEED_BORDER) {
+//                result.add(hMSpeedL);
+//            }
+//            if (row[AnalogInParams.SPEED_HM_RIGHT.ordinal()] > MOTOR_SPEED_BORDER) {
+//                result.add(hMSpeedR);
+//            }
+//            if (row[AnalogInParams.TEMP_COOLANT.ordinal()] > COOLANT_TEMP_BORDER) {
+//                result.add(tempCoolant);
+//            }
+//            return result;
+//        }
+//        return null;
+//    }
 }
