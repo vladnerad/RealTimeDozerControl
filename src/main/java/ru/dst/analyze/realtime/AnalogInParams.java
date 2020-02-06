@@ -1,0 +1,23 @@
+package ru.dst.analyze.realtime;
+
+public enum AnalogInParams {
+    JOY_MOVE_FORW_REV,
+    JOY_MOVE_LEFT_RIGHT,
+    PRESS_PUMP_LEFT,
+    PRESS_PUMP_RIGHT,
+    PRESS_BRAKE,
+    FUEL_LEVEL,
+    JOY_ATTACH_FORW_REV,
+    JOY_ATTACH_LEFT_RIGHT,
+    PRESS_ATTACH,
+    PRESS_FAN_DRIVE,
+    TEMP_ENVIR,
+    TEMP_TURBO,
+    TEMP_HYD_OIL,
+    SPEED_HM_LEFT,
+    SPEED_HM_RIGHT,
+    SPEED_ENGINE,
+    TEMP_COOLANT,
+    PRESS_ENGINE_OIL,
+    MOTOR_HOUS;
+}

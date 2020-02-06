@@ -1,0 +1,292 @@
+2020-02-04 08:54:10,341 WARN r.d.a.r.App [main] dknj
+2020-02-04 09:00:57,576 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 09:05:58,101 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT]
+2020-02-04 09:10:58,811 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 09:15:59,262 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT]
+2020-02-04 09:20:59,958 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 09:26:00,449 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 09:31:00,904 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT]
+2020-02-04 09:36:01,453 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT] Errors: [61]
+2020-02-04 09:37:53,938 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 09:41:02,044 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT] Errors: [61]
+2020-02-04 09:42:54,364 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 09:46:02,592 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 09:47:55,112 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 09:51:03,362 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT]
+2020-02-04 09:52:55,633 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 09:56:04,107 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT, Pump pressure issue RIGHT]
+2020-02-04 09:57:56,103 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:01:04,764 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:02:56,663 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:06:05,214 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:11:05,750 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT]
+2020-02-04 10:16:06,272 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:21:06,704 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:21:18,217 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:26:07,134 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT]
+2020-02-04 10:27:12,462 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:31:07,557 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT]
+2020-02-04 10:32:13,060 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:36:08,338 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:37:13,534 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:41:08,796 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:42:14,048 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:46:09,530 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:47:14,472 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:51:11,501 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:52:14,868 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 10:56:12,197 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT] Errors: [61]
+2020-02-04 10:57:15,617 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:01:13,202 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:02:16,181 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:06:13,825 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:07:16,630 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:11:14,672 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:12:17,161 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:16:19,557 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:17:24,361 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:21:20,009 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT]
+2020-02-04 11:22:24,858 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 11:26:20,730 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT, Pump pressure issue RIGHT]
+2020-02-04 11:27:25,889 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT]
+2020-02-04 11:31:21,337 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT]
+2020-02-04 11:32:32,219 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT]
+2020-02-04 11:36:22,272 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT]
+2020-02-04 11:37:32,736 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 11:41:22,725 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:42:33,162 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT] Errors: [61]
+2020-02-04 11:46:23,484 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT] Errors: [61]
+2020-02-04 11:47:33,605 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:51:24,013 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT] Errors: [61]
+2020-02-04 11:52:34,104 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 11:56:24,545 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 11:57:34,485 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:01:27,945 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:02:35,108 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:06:28,433 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:07:35,646 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:11:29,200 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT]
+2020-02-04 12:12:36,344 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:16:38,947 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:17:36,760 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:21:39,362 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:22:38,220 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:26:39,980 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:27:38,761 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:31:40,841 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT]
+2020-02-04 12:32:39,166 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:36:41,512 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:37:40,331 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:41:41,914 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:42:40,796 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:46:42,526 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:47:41,655 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:51:43,559 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:52:42,154 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:56:44,217 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 12:57:42,609 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:01:53,342 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:02:44,689 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:06:53,885 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:07:45,106 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:11:54,299 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:12:45,505 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:16:54,773 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:17:46,119 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:21:55,334 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:23:32,525 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:26:55,915 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:28:33,021 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:31:56,603 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:33:33,600 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:36:57,166 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:38:34,206 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:41:57,832 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:43:34,896 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:46:58,447 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:48:35,550 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:51:59,205 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:53:36,069 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:56:59,755 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 13:58:36,532 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:02:00,235 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:03:37,282 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:07:00,751 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:08:38,247 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:12:01,385 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:13:38,684 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:17:01,873 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:18:39,090 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:22:02,266 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT]
+2020-02-04 14:23:39,561 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:27:02,753 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:28:40,146 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:32:03,445 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT]
+2020-02-04 14:33:40,594 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:37:04,072 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:38:40,971 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 14:42:04,492 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 14:43:41,424 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 14:47:05,026 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 14:48:41,892 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 14:52:06,010 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 14:53:42,410 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 14:57:06,951 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 14:58:43,037 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:02:07,415 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:03:43,868 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:07:08,308 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:08:44,224 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:12:09,072 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT] Errors: [61]
+2020-02-04 15:13:45,481 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:17:10,001 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:18:46,081 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:22:10,607 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:23:46,713 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:27:11,100 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:28:47,228 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:32:12,056 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:33:47,684 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:37:12,506 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT]
+2020-02-04 15:38:48,159 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:42:13,006 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:43:48,644 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:47:13,414 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:48:49,029 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:52:13,905 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:53:50,410 WARN r.d.a.r.App [main] Errors: [61]
+2020-02-04 15:57:14,576 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 15:58:50,832 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:02:16,398 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:03:51,290 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:07:16,817 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:08:51,680 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:12:17,195 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:13:52,100 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:17:17,691 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:18:52,568 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:22:18,169 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:23:52,974 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:27:19,092 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:28:53,424 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:33:54,254 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:37:40,620 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:38:54,637 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:42:40,977 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:43:55,048 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:47:41,431 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:52:41,870 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 16:57:42,784 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 17:02:43,230 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT]
+2020-02-04 17:07:43,793 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT]
+2020-02-04 17:12:44,192 WARN r.d.a.r.App [main] Issues: [Pump pressure issue LEFT]
+2020-02-04 17:17:44,602 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT]
+2020-02-04 17:22:44,988 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-04 17:27:45,515 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT]
+2020-02-04 17:32:46,133 WARN r.d.a.r.App [main] Issues: [Pump pressure issue RIGHT, Pump pressure issue LEFT]
+2020-02-05 06:53:03,921 INFO r.d.a.r.App [main] Standstill
+2020-02-05 06:54:04,070 INFO r.d.a.r.App [main] Standstill
+2020-02-05 06:55:04,268 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:00:20,260 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:05:20,458 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:10:20,617 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:15:20,745 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:20:20,937 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:25:21,467 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:30:21,696 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:35:21,856 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:40:22,008 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:45:22,211 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:50:22,330 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:55:22,531 INFO r.d.a.r.App [main] Standstill
+2020-02-05 07:57:54,193 WARN r.d.a.r.App [main]  Issues: [Pump pressure issue LEFT: ] Errors: [2, 3, 61]
+2020-02-05 08:05:34,620 WARN r.d.a.r.App [main]  Issues: [Pump pressure issue LEFT: ] Errors: [2, 3, 61]
+2020-02-05 08:13:17,192 WARN r.d.a.r.App [main]  Issues: [Pump pressure issue LEFT: ] Errors: [2, 3, 61]
+2020-02-05 08:19:57,602 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-05 08:24:57,976 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-05 08:29:58,416 WARN r.d.a.r.App [main] Errors: [3]
+2020-02-05 08:34:58,588 INFO r.d.a.r.App [main] Dozer works fine
+2020-02-05 08:39:59,126 INFO r.d.a.r.App [main] Standstill
+2020-02-05 08:44:59,265 INFO r.d.a.r.App [main] Standstill
+2020-02-05 08:49:59,405 INFO r.d.a.r.App [main] Standstill
+2020-02-05 08:54:59,596 INFO r.d.a.r.App [main] Standstill
+2020-02-05 08:59:59,722 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:05:00,243 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:10:00,440 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:15:00,633 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:20:00,755 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:25:00,942 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:30:01,075 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:35:01,197 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:40:01,395 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:45:01,597 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:50:01,841 INFO r.d.a.r.App [main] Standstill
+2020-02-05 09:55:01,961 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:00:02,098 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:05:02,227 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:10:03,332 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:15:03,560 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:20:04,085 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:25:04,212 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:30:05,611 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:35:06,506 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:40:06,744 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:45:06,900 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:50:07,027 INFO r.d.a.r.App [main] Standstill
+2020-02-05 10:55:07,548 INFO r.d.a.r.App [main] Standstill
+2020-02-05 11:00:07,680 INFO r.d.a.r.App [main] Standstill
+2020-02-05 11:05:07,886 INFO r.d.a.r.App [main] Standstill
+2020-02-05 11:10:08,070 INFO r.d.a.r.App [main] Standstill
+2020-02-05 11:15:08,384 INFO r.d.a.r.App [main] Standstill
+2020-02-05 11:20:22,231 INFO r.d.a.r.App [main] Standstill
+2020-02-05 11:25:22,377 INFO r.d.a.r.App [main] Standstill
+2020-02-05 11:36:23,181 DEBUG r.d.a.r.JsonHelper [main] Getting connection...
+2020-02-05 11:36:23,324 DEBUG r.d.a.r.JsonHelper [main] Connection established. 
+2020-02-05 11:36:23,324 DEBUG r.d.a.r.JsonHelper [main] Collecting data...
+2020-02-05 11:36:23,325 DEBUG r.d.a.r.JsonHelper [main] Data collected.
+2020-02-05 11:36:23,390 INFO r.d.a.r.App [main] Standstill
+2020-02-05 11:41:23,390 DEBUG r.d.a.r.JsonHelper [main] Getting connection...
+2020-02-05 11:41:23,594 DEBUG r.d.a.r.JsonHelper [main] Connection established. 
+2020-02-05 11:41:23,594 DEBUG r.d.a.r.JsonHelper [main] Collecting data...
+2020-02-05 11:41:23,595 DEBUG r.d.a.r.JsonHelper [main] Data collected.
+2020-02-05 11:41:23,602 INFO r.d.a.r.App [main] Standstill
+2020-02-05 16:32:41,681 WARN r.d.a.r.App [main] testtest
+2020-02-05 16:41:51,893 WARN r.d.a.r.App [main] hsgkjbskj
+2020-02-05 16:44:20,250 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-05 16:53:29,339 WARN r.d.a.r.App [main] test2
+2020-02-06 07:15:27,709 WARN r.d.a.r.App [main] test2
+2020-02-06 07:15:27,709 WARN r.d.a.r.App [main] test2
+2020-02-06 07:16:32,119 WARN r.d.a.r.App [main] test2
+2020-02-06 07:17:45,450 WARN r.d.a.r.App [main] test2
+2020-02-06 07:32:22,363 WARN r.d.a.r.App [main] test2
+2020-02-06 07:33:13,279 WARN r.d.a.r.App [main] test2
+2020-02-06 07:34:24,844 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-06 07:34:24,847 WARN r.d.a.r.App [main] test2
+2020-02-06 07:36:11,440 WARN r.d.a.r.App [main] test2
+2020-02-06 07:36:54,698 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-06 07:42:15,320 DEBUG r.d.a.r.JsonHelper [main] Getting connection...
+2020-02-06 07:42:15,550 DEBUG r.d.a.r.JsonHelper [main] Connection established. 
+2020-02-06 07:42:15,551 DEBUG r.d.a.r.JsonHelper [main] Collecting data...
+2020-02-06 07:42:15,553 DEBUG r.d.a.r.JsonHelper [main] Data collected.
+2020-02-06 07:46:06,650 WARN r.d.a.r.App [main] test2
+2020-02-06 07:46:17,288 INFO  [main] hsgkjbskj
+2020-02-06 07:46:17,291 WARN r.d.a.r.App [main] test2
+2020-02-06 07:47:09,497 INFO  [main] hsgkjbskj
+2020-02-06 07:47:09,500 WARN r.d.a.r.App [main] test2
+2020-02-06 07:48:05,459 INFO  [main] hsgkjbskj
+2020-02-06 07:48:05,462 WARN r.d.a.r.App [main] test2
+2020-02-06 08:11:27,495 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-06 08:11:27,497 WARN r.d.a.r.App [main] test2
+2020-02-06 08:17:41,458 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-06 08:17:41,461 WARN r.d.a.r.App [main] test2
+2020-02-06 08:17:56,455 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-06 08:17:56,457 WARN r.d.a.r.App [main] test2
+2020-02-06 08:18:19,501 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-06 08:18:19,504 WARN r.d.a.r.App [main] test2
+2020-02-06 08:18:58,023 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-06 08:18:58,026 WARN r.d.a.r.App [main] test2
+2020-02-06 08:19:31,913 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-06 08:19:31,915 WARN r.d.a.r.App [main] test2
+2020-02-06 08:20:50,939 INFO r.d.a.r.App [main] hsgkjbskj
+2020-02-06 08:21:20,885 WARN r.d.a.r.App [main] test2
+2020-02-06 08:23:05,359 WARN r.d.a.r.App [main] test2
