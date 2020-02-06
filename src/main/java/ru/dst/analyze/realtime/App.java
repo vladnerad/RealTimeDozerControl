@@ -9,18 +9,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-/**
- * Hello world!
- */
 public class App {
-//    public static final String[] ANALOG_IN_NAMES =
-//            {"Time", "JoyMoveF(+)/B(-)", "JoyMoveR(+)/L(-)", "PressLPump",
-//                    "PressRPump", "PressBrake", "FuelLevel", "JoyAttachF(+)/B(-)",
-//                    "JoyAttachR(+)/L(-)", "PressAttach", "PressFanDrive", "EnvTemp",
-//                    "TurboTemp", "HydOilTemp", "HMSpeedL", "HMSpeedR",
-//                    "EngineSpeed", "CoolantTemp", "EngineOilPress", "MotoHours",
-//                    "Errors"};
-
     private static final Logger logger = LogManager.getLogger(App.class);
 //    private static final Logger LOG = LogManager.getRootLogger();
 
@@ -83,15 +72,12 @@ public class App {
     public static void issues5minGap(LocalDateTime from) {
         LocalDateTime to = from.plusMinutes(TIME_GAP_MINUTES);
         Message message = getMessage(from, to);
-//        System.out.println(message);
-//        if (message != null) {
-            getIssues(message);
-//        }
+        getIssues(message);
     }
 
     public static void getIssues(Message message) {
-        Set<String> issues = null;
-        Set<Integer> errors = null;
+        Set<String> issues;
+        Set<Integer> errors;
         if (message != null) {
 //            String[] time = DataParser.getTimeArr(message);
             //getting analogIn from JSON response
@@ -176,36 +162,35 @@ public class App {
         return null;
     }
 
-    public static Map<String, Integer> fillMap(int[][] data){
+    public static Map<String, Integer> fillMap(int[][] data) {
         Map<String, Integer> map = initParamsMap();
-        for (int[] row: data){
+        for (int[] row : data) {
             map.replace(envirTemp, map.get(envirTemp), map.get(envirTemp) + row[AnalogInParams.TEMP_ENVIR.ordinal()]);
 
-            if (row[AnalogInParams.PRESS_PUMP_LEFT.ordinal()] > map.get(pressL)){
+            if (row[AnalogInParams.PRESS_PUMP_LEFT.ordinal()] > map.get(pressL)) {
                 map.replace(pressL, row[AnalogInParams.PRESS_PUMP_LEFT.ordinal()]);
             }
-            if (row[AnalogInParams.PRESS_PUMP_RIGHT.ordinal()] > map.get(pressR)){
+            if (row[AnalogInParams.PRESS_PUMP_RIGHT.ordinal()] > map.get(pressR)) {
                 map.replace(pressR, row[AnalogInParams.PRESS_PUMP_RIGHT.ordinal()]);
             }
-            /**/
-            if (row[AnalogInParams.TEMP_HYD_OIL.ordinal()] > map.get(tempHydOil)){
+            if (row[AnalogInParams.TEMP_HYD_OIL.ordinal()] > map.get(tempHydOil)) {
                 map.replace(tempHydOil, row[AnalogInParams.TEMP_HYD_OIL.ordinal()]);
             }
-            if (row[AnalogInParams.SPEED_HM_LEFT.ordinal()] > map.get(hMSpeedL)){
+            if (row[AnalogInParams.SPEED_HM_LEFT.ordinal()] > map.get(hMSpeedL)) {
                 map.replace(hMSpeedL, row[AnalogInParams.SPEED_HM_LEFT.ordinal()]);
             }
-            if (row[AnalogInParams.SPEED_HM_RIGHT.ordinal()] > map.get(hMSpeedR)){
+            if (row[AnalogInParams.SPEED_HM_RIGHT.ordinal()] > map.get(hMSpeedR)) {
                 map.replace(hMSpeedR, row[AnalogInParams.SPEED_HM_RIGHT.ordinal()]);
             }
-            if (row[AnalogInParams.TEMP_COOLANT.ordinal()] > map.get(tempCoolant)){
+            if (row[AnalogInParams.TEMP_COOLANT.ordinal()] > map.get(tempCoolant)) {
                 map.replace(tempCoolant, row[AnalogInParams.TEMP_COOLANT.ordinal()]);
             }
         }
-        map.replace(envirTemp, map.get(envirTemp), map.get(envirTemp)/data.length);
+        map.replace(envirTemp, map.get(envirTemp), map.get(envirTemp) / data.length);
         return map;
     }
 
-    public static Map<String, Integer> initParamsMap(){
+    public static Map<String, Integer> initParamsMap() {
         Map<String, Integer> map = new HashMap<>();
         map.put(pressL, maxPressL);
         map.put(pressR, maxPressR);
@@ -217,24 +202,24 @@ public class App {
         return map;
     }
 
-    public static String getIssuesMessage(Map<String, Integer> map){
+    public static String getIssuesMessage(Map<String, Integer> map) {
         StringBuilder sb = new StringBuilder();
-        if (map.get(pressL) > PUMP_PRESS_BORDER){
+        if (map.get(pressL) > PUMP_PRESS_BORDER) {
             sb.append(pressL).append(map.get(pressL)).append(" ");
         }
-        if (map.get(pressR) > PUMP_PRESS_BORDER){
+        if (map.get(pressR) > PUMP_PRESS_BORDER) {
             sb.append(pressR).append(map.get(pressR)).append(" ");
         }
-        if (map.get(tempHydOil) > HYD_OIL_TEMP_BORDER){
+        if (map.get(tempHydOil) > HYD_OIL_TEMP_BORDER) {
             sb.append(tempHydOil).append(map.get(tempHydOil)).append(" ");
         }
-        if (map.get(hMSpeedL) > MOTOR_SPEED_BORDER){
+        if (map.get(hMSpeedL) > MOTOR_SPEED_BORDER) {
             sb.append(hMSpeedL).append(map.get(hMSpeedL)).append(" ");
         }
-        if (map.get(hMSpeedR) > MOTOR_SPEED_BORDER){
+        if (map.get(hMSpeedR) > MOTOR_SPEED_BORDER) {
             sb.append(hMSpeedR).append(map.get(hMSpeedR)).append(" ");
         }
-        if (map.get(tempCoolant) > COOLANT_TEMP_BORDER){
+        if (map.get(tempCoolant) > COOLANT_TEMP_BORDER) {
             sb.append(tempCoolant).append(map.get(tempCoolant)).append(" ");
         }
         return sb.toString();
