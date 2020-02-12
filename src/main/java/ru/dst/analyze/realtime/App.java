@@ -11,7 +11,6 @@ import java.util.*;
 
 public class App {
     private static final Logger logger = LogManager.getLogger(App.class);
-//    private static final Logger LOG = LogManager.getRootLogger();
 
     public static final int PUMP_PRESS_BORDER = 450;
 //    public static final int ENV_TEMP_BORDER = -20;
@@ -38,15 +37,10 @@ public class App {
     public static final int maxHMSpeedR = 0;
 
     public static void main(String[] args) {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-
-//        StringBuilder issuesMessage = new StringBuilder();
-//        logger.info("hsgkjbskj");
-//        logger.warn("test2");
-//        System.out.println(new StringBuilder().toString() == null);
+//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
 //        LocalDateTime now = LocalDateTime.now();
-//        LocalDateTime from = now.minusDays(2);
+//        LocalDateTime from = now.minusHours(60);
 //        Message message = getMessage(from, now);
 //        if (message != null) {
 //            getIssues(message);
@@ -86,7 +80,6 @@ public class App {
     }
 
     public static void getIssues(Message message) {
-//        Set<String> issues;
         Set<Integer> errors;
         if (message != null) {
 //            String[] time = DataParser.getTimeArr(message);
@@ -96,14 +89,9 @@ public class App {
 //            boolean[][] digInData = DataParser.getDigitalInData(message);
 
             if (data != null) {
-//                issues = new HashSet<>();
                 int[][] clearData = Arrays.stream(data).map(DataHandler::convertData).toArray(int[][]::new);
-//                for (int[] rec : clearData) {
-//                    issues.addAll(getIssuesFromRow(rec));
-//                }
                 Map<String, Integer> issuesMap = fillMap(clearData);
                 String issuesMessage = getIssuesMessage(issuesMap);
-//                System.out.println(mes);
                 errors = new HashSet<>();
                 for (int[] rec : data) {
                     errors.addAll(DataParser.getErrorsFromRow(rec));
@@ -117,21 +105,21 @@ public class App {
                             .concat(degC)
                             .concat("Dozer works fine");
                     logger.info(logMess);
-                } else if (/*!issues.isEmpty()*/!issuesMessage.equals("") && !errors.isEmpty()) {
+                } else if (!issuesMessage.equals("") && !errors.isEmpty()) {
                     logMess = logMess.concat(envirTemp)
                             .concat(String.valueOf(issuesMap.get(envirTemp)))
                             .concat(degC)
                             .concat(" Issues: ")
-                            .concat(issuesMessage/*issues.toString()*/)
+                            .concat(issuesMessage)
                             .concat(" Errors: ")
                             .concat(errors.toString());
                     logger.warn(logMess);
-                } else if (/*!issues.isEmpty()*/!issuesMessage.equals("")) {
+                } else if (!issuesMessage.equals("")) {
                     logMess = logMess.concat(envirTemp)
                             .concat(String.valueOf(issuesMap.get(envirTemp)))
                             .concat(degC)
                             .concat("Issues: ")
-                            .concat(issuesMessage/*issues.toString()*/);
+                            .concat(issuesMessage);
                     logger.warn(logMess);
                 } else {
                     logMess = logMess.concat(envirTemp)
@@ -214,33 +202,4 @@ public class App {
         }
         return sb.toString();
     }
-
-//    public static Set<String> getIssuesFromRow(int[] row) {
-//        if (row != null) {
-//            Set<String> result = new HashSet<>();
-//            if (row[AnalogInParams.PRESS_PUMP_LEFT.ordinal()] > PUMP_PRESS_BORDER) {
-//                result.add(pressL);
-//            }
-//            if (row[AnalogInParams.PRESS_PUMP_RIGHT.ordinal()] > PUMP_PRESS_BORDER) {
-//                result.add(pressR);
-//            }
-//            if (row[AnalogInParams.TEMP_ENVIR.ordinal()] < ENV_TEMP_BORDER) {
-//                result.add(envirTemp);
-//            }
-//            if (row[AnalogInParams.TEMP_HYD_OIL.ordinal()] > HYD_OIL_TEMP_BORDER) {
-//                result.add(tempHydOil);
-//            }
-//            if (row[AnalogInParams.SPEED_HM_LEFT.ordinal()] > MOTOR_SPEED_BORDER) {
-//                result.add(hMSpeedL);
-//            }
-//            if (row[AnalogInParams.SPEED_HM_RIGHT.ordinal()] > MOTOR_SPEED_BORDER) {
-//                result.add(hMSpeedR);
-//            }
-//            if (row[AnalogInParams.TEMP_COOLANT.ordinal()] > COOLANT_TEMP_BORDER) {
-//                result.add(tempCoolant);
-//            }
-//            return result;
-//        }
-//        return null;
-//    }
 }
