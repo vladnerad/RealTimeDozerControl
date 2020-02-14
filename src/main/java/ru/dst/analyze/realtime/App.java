@@ -13,7 +13,7 @@ public class App {
     private static final Logger logger = LogManager.getLogger(App.class);
 
     public static final int PUMP_PRESS_BORDER = 450;
-//    public static final int ENV_TEMP_BORDER = -20;
+    //    public static final int ENV_TEMP_BORDER = -20;
     public static final int HYD_OIL_TEMP_BORDER = 75;
     public static final int MOTOR_SPEED_BORDER = 3500;
     public static final int COOLANT_TEMP_BORDER = 90;
@@ -27,6 +27,8 @@ public class App {
     public static final String hMSpeedL = "HM rpm issue LEFT: ";
     public static final String hMSpeedR = "HM rpm issue RIGHT: ";
     public static final String tempCoolant = "Coolant temperature issue: ";
+    public static final String engineStart = "Engine started: %d times ";
+    public static final String degC = "°C ";
 
     public static final int avEnvirTemp = -40;
     public static final int maxPressL = 0;
@@ -97,38 +99,29 @@ public class App {
                     errors.addAll(DataParser.getErrorsFromRow(rec));
                 }
 
-                String logMess = "";
-                String degC = "°C ";
+                String logMess = envirTemp
+                        .concat(String.valueOf(issuesMap.get(envirTemp)))
+                        .concat(degC)
+                        .concat(getDieselStartMessage(getDieselStarts(clearData)));
                 if (issuesMessage.equals("") && errors.isEmpty()) {
-                    logMess = logMess.concat(envirTemp)
-                            .concat(String.valueOf(issuesMap.get(envirTemp)))
-                            .concat(degC)
-                            .concat("Dozer works fine");
+                    logMess = logMess.concat("Dozer works fine");
                     logger.info(logMess);
                 } else if (!issuesMessage.equals("") && !errors.isEmpty()) {
-                    logMess = logMess.concat(envirTemp)
-                            .concat(String.valueOf(issuesMap.get(envirTemp)))
-                            .concat(degC)
-                            .concat(" Issues: ")
+                    logMess = logMess.concat(" Issues: ")
                             .concat(issuesMessage)
                             .concat(" Errors: ")
                             .concat(errors.toString());
                     logger.warn(logMess);
                 } else if (!issuesMessage.equals("")) {
-                    logMess = logMess.concat(envirTemp)
-                            .concat(String.valueOf(issuesMap.get(envirTemp)))
-                            .concat(degC)
-                            .concat("Issues: ")
+                    logMess = logMess.concat("Issues: ")
                             .concat(issuesMessage);
                     logger.warn(logMess);
                 } else {
-                    logMess = logMess.concat(envirTemp)
-                            .concat(String.valueOf(issuesMap.get(envirTemp)))
-                            .concat(degC)
-                            .concat("Errors: ")
+                    logMess = logMess.concat("Errors: ")
                             .concat(errors.toString());
                     logger.warn(logMess);
                 }
+//                System.out.println(String.format(engineStart, getDieselStarts(clearData)));
             } else logger.info("Standstill");
         }
     }
@@ -201,5 +194,54 @@ public class App {
             sb.append(tempCoolant).append(map.get(tempCoolant)).append(spliter);
         }
         return sb.toString();
+    }
+
+    public static int getDieselStarts(int[][] clearData) {
+        int j = AnalogInParams.SPEED_ENGINE.ordinal();
+        boolean isStandstill = true;
+        int result = 0;
+        for (int i = 5; i < clearData.length; i = i + 5) {
+            int currentSpeed = clearData[i][j];
+            if (currentSpeed > 500) {
+                isStandstill = false;
+                if (i >= 5 &&
+                        (clearData[i - 1][j] == 0
+                                || clearData[i - 2][j] == 0
+                                || clearData[i - 3][j] == 0
+                                || clearData[i - 4][j] == 0
+                                || clearData[i - 5][j] == 0)) {
+                    result++;
+                }
+            }
+        }
+        int left = clearData.length % 5;
+        if (left != 0){
+            List<Integer> list = new ArrayList<>();
+            int y = clearData.length - 1 - left;
+            while (y < clearData.length) {
+                list.add(clearData[y][j]);
+                y++;
+            }
+            for (int x: list){
+                if (x > 500 && list.contains(0)){
+                    result++;
+                    break;
+                }
+            }
+        }
+        if (isStandstill) return -1;
+        return result;
+    }
+
+    public static String getDieselStartMessage(int i){
+        if (i == -1){
+            return "Diesel standstill ";
+        }
+        else if (i == 0){
+            return "Diesel running ";
+        }
+        else {
+            return String.format(engineStart, i);
+        }
     }
 }
